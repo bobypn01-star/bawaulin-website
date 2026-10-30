@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>bawaulin.cash | Aplikasi budgeting open trip pendakian</title>
+<meta name="description" content="Catat peserta dan pembayaran, simulasikan biaya, bagi hasil dengan adil, sampai cetak kwitansi dan laporan PDF. Semua di HP, jalan tanpa sinyal.">
+<meta name="theme-color" content="#0B0F14">
+<meta property="og:title" content="bawaulin.cash | Lieur ngitung? Bawa santai aja.">
+<meta property="og:description" content="Aplikasi budgeting untuk penyelenggara open trip pendakian. Sekali bayar, tanpa langganan, jalan offline.">
+<meta property="og:type" content="website">
+<link rel="icon" href="logo.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@500;700;800&family=Inter:wght@400;500;600&display=swap">
+<style>
+html{scroll-behavior:smooth}body{margin:0;background:#0B0F14}[id]{scroll-margin-top:84px}a:focus-visible,.btn:focus-visible{outline:2px solid #FF8A3D;outline-offset:3px}img{max-width:100%}
+.p{background:#0B0F14;color:#E9EEF3;font-family:Inter,sans-serif;line-height:1.6}
+.p *{box-sizing:border-box}
+.w{max-width:1160px;margin:0 auto;padding:0 24px}
+.h,.p h1,.p h2,.p h3{font-family:Sora,sans-serif;margin:0;letter-spacing:-.02em}
+.p h1{font-size:clamp(40px,6.4vw,76px);line-height:1.04;font-weight:800}
+.p h2{font-size:clamp(30px,4vw,48px);line-height:1.1;font-weight:700}
+.p h3{font-size:18px;font-weight:700}
+.p p{margin:0}
+.m{color:#9AA7B4}
+.ey{font:600 12px Inter,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#FF8A3D;margin-bottom:16px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 26px;border-radius:999px;font:600 15px Inter,sans-serif;text-decoration:none;white-space:nowrap}
+.b1{background:#FF8A3D;color:#1A0F05}.b1:hover{background:#FFA062}
+.b2{border:1px solid #2B3744;color:#E9EEF3}.b2:hover{border-color:#9AA7B4}
+.nav{position:sticky;top:0;z-index:5;background:#0B0F14;border-bottom:1px solid #18212B}
+.nv{display:flex;align-items:center;justify-content:space-between;height:68px;gap:16px}
+.nl{display:flex;gap:28px;font-size:14px}.nl a{color:#9AA7B4;text-decoration:none}.nl a:hover{color:#fff}
+.hero{display:grid;grid-template-columns:1.2fr .8fr;gap:48px;align-items:center;padding:88px 0 72px}
+.c{background:#111821;border:1px solid #1E2A36;border-radius:20px;padding:28px}
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.ic{width:44px;height:44px;border-radius:12px;background:#1B2430;color:#FF8A3D;display:flex;align-items:center;justify-content:center;font:700 16px Sora,sans-serif;margin-bottom:18px}
+.ph{width:290px;margin:0 auto;border:1px solid #2B3744;border-radius:40px;padding:14px;background:#0E141B}
+.tl{background:#151D27;border:1px solid #1E2A36;border-radius:14px;padding:14px;font-size:13px}
+.tl b{display:block;font:700 14px Sora,sans-serif;color:#fff}
+.lt{background:#F3F1EC;color:#101820}.lt .m{color:#4A5662}
+.lt .c{background:#fff;border-color:#E3DFD6}.lt .ic{background:#101820;color:#FF8A3D}
+.pr{border-radius:24px;padding:32px;border:1px solid #1E2A36;background:#111821;display:flex;flex-direction:column;gap:14px}
+.pr.hl{background:#FF8A3D;color:#1A0F05;border:0;transform:translateY(-12px)}
+.pr li{margin:0 0 8px;list-style:none;font-size:14px}
+.pr ul{padding:0;margin:0}
+.old{text-decoration:line-through;opacity:.7;font-size:15px}
+.pill{display:inline-block;font:600 11px Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase;border-radius:999px;padding:4px 12px;border:1px solid currentColor}
+.num{font:800 15px Sora,sans-serif;color:#FF8A3D}
+@media(max-width:900px){.hero,.g3,.g4{grid-template-columns:1fr}.nl{display:none}.pr.hl{transform:none}}
+</style>
+</head>
+<body>
+<div class="p">
+
+<div class="nav"><div class="w nv">
+<a href="#" class="h" style="color:#fff;text-decoration:none;font-weight:800;font-size:19px;display:flex;align-items:center;gap:10px"><img src="logo.png" alt="Logo bawaulin.cash" style="width:38px;height:auto"><span>bawaulin<span style="color:#FF8A3D">.cash</span></span></a>
+<div class="nl"><a href="#fitur">Fitur</a><a href="#cara">Cara kerja</a><a href="#harga">Harga</a><a href="#faq">FAQ</a></div>
+<a href="#harga" class="btn b1" style="min-height:42px;padding:0 20px">Beli sekarang</a>
+</div></div>
+
+<div class="w hero">
+<div>
+<div class="ey">Untuk penyelenggara open trip pendakian</div>
+<h1>Lieur ngitung?<br><span style="color:#FF8A3D">Bawa santai</span> aja.</h1>
+<p class="m" style="font-size:19px;margin:24px 0 32px;max-width:540px">Catat peserta dan pembayaran, simulasikan biaya, bagi hasil dengan adil, sampai cetak kwitansi dan laporan PDF. Semua di HP, jalan tanpa sinyal.</p>
+<div style="display:flex;gap:12px;flex-wrap:wrap"><a href="#harga" class="btn b1">Lihat paket &amp; harga</a><a href="#fitur" class="btn b2">Lihat fitur</a></div>
+<p class="m" style="font-size:13px;margin-top:22px">Sekali bayar &nbsp;·&nbsp; Tanpa langganan &nbsp;·&nbsp; Data tersimpan di HP-mu</p>
+</div>
+<div class="ph">
+<div style="padding:6px 8px 14px;display:flex;justify-content:space-between;align-items:center"><b class="h" style="font-size:14px;color:#FF8A3D">Budgeting Pendakian</b><span style="width:9px;height:9px;border-radius:50%;background:#3DDC97"></span></div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+<div class="tl"><b>Tamu</b><span class="m">Daftar peserta</span></div>
+<div class="tl"><b>Itinerary</b><span class="m">Rundown perjalanan</span></div>
+<div class="tl"><b>Perlengkapan</b><span class="m">Kebutuhan &amp; sewa</span></div>
+<div class="tl"><b>Checklist</b><span class="m">Barang bawaan</span></div>
+<div class="tl"><b>Pembayaran</b><span class="m">Patungan peserta</span></div>
+<div class="tl"><b>Bagi Hasil</b><span class="m">Untung &amp; rugi</span></div>
+</div>
+<div style="margin:14px 4px 6px;font-size:12px;color:#9AA7B4;display:flex;gap:8px;align-items:center"><span style="width:8px;height:8px;border-radius:50%;background:#FF8A3D"></span>Jalan offline di gunung</div>
+</div>
+</div>
+
+<div style="border-top:1px solid #18212B;border-bottom:1px solid #18212B"><div class="w g4" style="padding-top:28px;padding-bottom:28px">
+<div><b class="h" style="font-size:15px">Jalan offline</b><p class="m" style="font-size:13px">Di gunung tanpa sinyal tetap bisa dipakai</p></div>
+<div><b class="h" style="font-size:15px">Data di HP-mu</b><p class="m" style="font-size:13px">Data trip tidak dikirim ke server kami</p></div>
+<div><b class="h" style="font-size:15px">Lisensi seumur hidup</b><p class="m" style="font-size:13px">Satu kali bayar untuk satu penyelenggara</p></div>
+<div><b class="h" style="font-size:15px">Dibuat sesama penyelenggara</b><p class="m" style="font-size:13px">Lahir dari kerepotan open trip sungguhan</p></div>
+</div></div>
+
+<div class="lt" style="padding:96px 0"><div class="w">
+<div class="ey" style="color:#C2410C">Masalahnya</div>
+<h2 style="max-width:760px">Uang peserta, chat WhatsApp, dan Excel tercecer di mana-mana.</h2>
+<p class="m" style="font-size:17px;margin:20px 0 44px;max-width:680px">Siapa yang sudah lunas? Berapa sisa dana? Kenapa hitungan akhir tidak pas? Penyelenggara open trip sering menghabiskan malam sebelum berangkat hanya untuk mencocokkan angka.</p>
+<div class="g3">
+<div class="c"><div class="ic">Rp</div><h3>Tagihan peserta berantakan</h3><p class="m" style="margin-top:8px;font-size:14px">Catat pembayaran per orang, lihat sisa tagihan, kirim pengingat lewat WhatsApp satu per satu.</p></div>
+<div class="c"><div class="ic">%</div><h3>Harga jual susah ditentukan</h3><p class="m" style="margin-top:8px;font-size:14px">Simulasikan beberapa skenario biaya, lihat titik impas, lalu terapkan ke anggaran.</p></div>
+<div class="c"><div class="ic">=</div><h3>Bagi hasil rawan salah paham</h3><p class="m" style="margin-top:8px;font-size:14px">Untung, rugi, dan talangan official dihitung otomatis dan transparan.</p></div>
+</div></div></div>
+
+<div id="fitur" style="padding:96px 0"><div class="w">
+<div class="ey">Fitur</div>
+<h2 style="max-width:720px;margin-bottom:44px">Semua yang dipakai penyelenggara, dalam satu aplikasi.</h2>
+<div class="g3">
+<div class="c"><div class="num">01</div><h3 style="margin:10px 0 8px">Peserta &amp; pembayaran</h3><p class="m" style="font-size:14px">Daftar tamu, cicilan, sisa tagihan, dan tenggat. Tagih lewat WhatsApp dengan pesan yang bisa kamu atur sendiri.</p></div>
+<div class="c"><div class="num">02</div><h3 style="margin:10px 0 8px">Simulasi biaya</h3><p class="m" style="font-size:14px">Coba skenario peserta dan harga jual, lihat titik impas, lalu terapkan ke anggaran pengeluaran.</p></div>
+<div class="c"><div class="num">03</div><h3 style="margin:10px 0 8px">Bagi hasil &amp; penyelesaian</h3><p class="m" style="font-size:14px">Hitung untung atau rugi, bagi rata ke official, dan lacak talangan supaya tidak ada yang merasa dirugikan.</p></div>
+<div class="c"><div class="num">04</div><h3 style="margin:10px 0 8px">Kwitansi &amp; laporan PDF</h3><p class="m" style="font-size:14px">Kwitansi rapi dan laporan keuangan trip siap kirim ke peserta, lengkap dengan logo dan stempel penyelenggara.</p></div>
+<div class="c"><div class="num">05</div><h3 style="margin:10px 0 8px">Itinerary, perlengkapan, checklist</h3><p class="m" style="font-size:14px">Rundown perjalanan, daftar barang bawaan dan sewa, serta checklist supaya tidak ada yang tertinggal di basecamp.</p></div>
+<div class="c"><div class="num">06</div><h3 style="margin:10px 0 8px">Offline &amp; data di HP-mu</h3><p class="m" style="font-size:14px">Jalan tanpa sinyal, data tetap di HP, bisa dicadangkan ke Drive atau WhatsApp kapan saja.</p></div>
+</div></div></div>
+
+<div id="cara" style="padding:24px 0 96px"><div class="w">
+<div class="ey">Cara dapatkan</div>
+<h2 style="margin-bottom:44px">Empat langkah, langsung dipakai.</h2>
+<div class="g4">
+<div class="c"><div class="num">1</div><h3 style="margin:10px 0 8px">Bayar</h3><p class="m" style="font-size:14px">Pilih paket dan bayar di halaman penjualan. QRIS paling hemat biaya.</p></div>
+<div class="c"><div class="num">2</div><h3 style="margin:10px 0 8px">Pasang aplikasi</h3><p class="m" style="font-size:14px">Buka tautan aplikasi di HP, pasang, lalu salin Kode Perangkat milikmu.</p></div>
+<div class="c"><div class="num">3</div><h3 style="margin:10px 0 8px">Kirim kode</h3><p class="m" style="font-size:14px">Kirim Kode Perangkat dan bukti bayar ke WhatsApp kami.</p></div>
+<div class="c" style="background:#FF8A3D;border:0;color:#1A0F05"><div class="num" style="color:#1A0F05">4</div><h3 style="margin:10px 0 8px">Aktif</h3><p style="font-size:14px">Kamu menerima kunci aktivasi. Masukkan ke aplikasi, selesai.</p></div>
+</div></div></div>
+
+<div id="harga" style="padding:96px 0;background:#0E141B;border-top:1px solid #18212B"><div class="w">
+<div class="ey">Harga perkenalan · sekali bayar, tanpa langganan</div>
+<h2>Pilih paket yang pas untuk tripmu.</h2>
+<p class="m" style="margin:16px 0 56px;font-size:15px">Harga perkenalan berlaku untuk waktu terbatas dan bisa kembali ke harga normal.</p>
+<div class="g3" style="align-items:stretch">
+<div class="pr"><span class="h m" style="font-size:13px;letter-spacing:.14em">RINTIS</span><div><div class="old m">Rp29.000</div><div class="h" style="font-size:42px;font-weight:800">Rp15.000</div></div><p class="m" style="font-size:14px">Mulai dengan harga ringan dan coba dulu di satu trip.</p><ul><li>7 hari latihan, semua fitur terbuka</li><li>Lalu satu trip penuh dengan semua fitur Puncak</li><li>Fitur dasar tetap bisa dipakai setelahnya</li><li>Data tidak disandera</li></ul></div>
+<div class="pr hl"><div style="display:flex;justify-content:space-between;align-items:center"><span class="h" style="font-size:13px;letter-spacing:.14em;font-weight:700">PUNCAK</span><span class="pill">Paling lengkap</span></div><div><div class="old">Rp99.000</div><div class="h" style="font-size:42px;font-weight:800">Rp39.000</div></div><p style="font-size:14px">Semua fitur sejak hari pertama, tanpa fase Rintis.</p><ul><li>Simulasi biaya dan Bagi Hasil</li><li>PDF dan kwitansi bersih dengan logo dan stempelmu</li><li>Pendaftaran online, Salin Template, Statistik Antar-Trip</li><li>Lisensi seumur hidup produk</li><li>Lebih murah daripada Rintis lalu upgrade</li></ul></div>
+<div class="pr"><div style="display:flex;justify-content:space-between;align-items:center"><span class="h m" style="font-size:13px;letter-spacing:.14em">VIP</span><span class="pill" style="color:#FF8A3D">Hanya 5 slot</span></div><div><div class="old m">Rp49.000</div><div class="h" style="font-size:42px;font-weight:800">Rp25.000</div></div><p class="m" style="font-size:14px">Untuk 5 pembeli pertama, dihitung dari uang yang pertama kali kami terima.</p><ul><li>Rintis dan Puncak sekaligus</li><li>Lencana VIP di akunmu</li><li>Jalur prioritas saat ada masalah</li><li>Suara untuk fitur baru dan akses awal</li></ul></div>
+</div>
+<div class="c" style="margin-top:40px;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap"><div><b class="h" style="font-size:16px">Sudah punya paket Rintis?</b><p class="m" style="font-size:14px">Upgrade ke Puncak cukup Rp29.000 (normal Rp79.000), tanpa kunci baru dan tanpa pasang ulang.</p></div><a href="#cara" class="btn b2">Cara beli</a></div>
+</div></div>
+
+<div id="faq" style="padding:96px 0"><div class="w" style="max-width:860px">
+<div class="ey">Pertanyaan umum</div>
+<h2 style="margin-bottom:40px">Sebelum kamu membeli.</h2>
+<div class="c" style="margin-bottom:14px;padding:22px 26px"><h3>Apakah bisa dipakai tanpa internet?</h3><p class="m" style="font-size:14px;margin-top:6px">Bisa. Aplikasi jalan offline. Aplikasi memeriksa status lisensi saat ada internet, jadi sesekali perlu online. Buka aplikasi dengan internet sekali sebelum berangkat trip.</p></div>
+<div class="c" style="margin-bottom:14px;padding:22px 26px"><h3>Di mana data trip disimpan?</h3><p class="m" style="font-size:14px;margin-top:6px">Hanya di HP-mu. Server kami hanya menerima kode perangkat dan versi aplikasi untuk memeriksa lisensi, bukan data peserta atau uang. Cadangkan secara rutin lewat menu Akun.</p></div>
+<div class="c" style="margin-bottom:14px;padding:22px 26px"><h3>Bagaimana kalau ganti HP?</h3><p class="m" style="font-size:14px;margin-top:6px">Minta kunci baru lewat WhatsApp, gratis maksimal 2 kali per tahun dengan nomor WhatsApp yang cocok dengan data pembelian.</p></div>
+<div class="c" style="margin-bottom:14px;padding:22px 26px"><h3>Apa bedanya Rintis dan Puncak?</h3><p class="m" style="font-size:14px;margin-top:6px">Rintis memberi 7 hari latihan lalu satu trip penuh dengan semua fitur. Setelah itu fitur Puncak (Simulasi, Bagi Hasil, Pendaftaran online, Salin Template, Statistik Antar-Trip, serta logo dan stempel di PDF) terkunci, dan fitur dasar tetap bisa dipakai. Puncak membuka semuanya tanpa batas waktu.</p></div>
+<div class="c" style="padding:22px 26px"><h3>Apakah ada pengembalian uang?</h3><p class="m" style="font-size:14px;margin-top:6px">Ini produk digital, jadi pembayaran yang sudah diterima tidak dikembalikan, kecuali aplikasi gagal diaktifkan karena kesalahan di pihak kami. Syarat lengkap ada di dalam aplikasi, di Pengaturan, Info Umum.</p></div>
+</div></div>
+
+<div id="kontak" class="w" style="padding-bottom:56px"><div class="c" style="padding:44px;display:flex;flex-wrap:wrap;gap:32px;align-items:center"><img src="logo.png" alt="Logo bawaulin.cash" style="width:96px;height:auto"><div style="flex:1 1 280px"><div class="ey" style="margin-bottom:10px">Tentang pembuat</div><h2 style="font-size:clamp(26px,3vw,36px)">Dibuat oleh bawaulin.trip.</h2><p class="m" style="margin-top:12px;font-size:15px;max-width:640px">bawaulin.cash adalah produk dari bawaulin.trip, lahir dari kerepotan open trip sungguhan. Untuk informasi lebih lanjut, tanya langsung lewat WhatsApp penjual atau ikuti kami di Instagram.</p><div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:22px"><a href="https://wa.me/6289618805100" class="btn b1">WhatsApp +62 896-1880-5100</a><a href="https://www.instagram.com/bawaulin.trip" class="btn b2">Instagram @bawaulin.trip</a></div></div></div></div>
+
+<div class="w" style="padding-bottom:96px"><div style="background:#FF8A3D;color:#1A0F05;border-radius:32px;padding:56px;display:flex;justify-content:space-between;align-items:center;gap:32px;flex-wrap:wrap">
+<div style="max-width:560px"><h2>Berangkat dengan hitungan yang sudah rapi.</h2><p style="margin-top:14px;font-size:15px">Bayar di lynk.id/[USERNAME], lalu kirim Kode Perangkat dan bukti bayar ke WhatsApp +62 896-1880-5100.</p></div>
+<a href="#harga" class="btn" style="background:#0B0F14;color:#fff;min-height:54px;padding:0 32px">Beli paket sekarang</a>
+</div></div>
+
+<div style="border-top:1px solid #18212B;padding:36px 0"><div class="w" style="display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:13px">
+<div style="display:flex;gap:12px;align-items:center"><img src="logo.png" alt="Logo bawaulin.cash" style="width:36px;height:auto"><div><b class="h" style="font-size:16px">bawaulin<span style="color:#FF8A3D">.cash</span></b><p class="m">Lieur ngitung, bawa santai · dibuat oleh bawaulin.trip</p></div></div>
+<p class="m" style="text-align:right">Syarat &amp; Ketentuan dan Kebijakan Privasi ada di dalam aplikasi.<br><a href="https://wa.me/6289618805100" style="color:#E9EEF3">WhatsApp +62 896-1880-5100</a> · <a href="https://www.instagram.com/bawaulin.trip" style="color:#E9EEF3">Instagram @bawaulin.trip</a></p>
+</div></div>
+
+</div>
+</body>
+</html>
